@@ -19,16 +19,16 @@ class Solution:
         # return maxArea
 
         """
-        When returning to this problem after some time I realized that a better solution exists. The solution involves a single while loop with a sliding window where where the lesser of the left and right pointers moves inwards on each iteration, until the pointers meet. This ensures that only windows that have a potential to have a greater area are examined.
+        When returning to this problem after some time I realized that a better solution exists.
+        The solution involves a single while loop with a sliding window where where the lesser of the left and right pointers moves inwards on each iteration, 
+        until the pointers meet. This ensures that only windows that have a potential to have a greater area are examined.
         Refactoring my code in this way reduces the runtime from O(n^2) to O(n/2) == O(n)
         """
         i = 0
         j = len(height) - 1
         maxArea = 0
         while i < j:
-            xValue = j - i
-            yValue = min(height[i], height[j])
-            maxArea = max (maxArea, xValue * yValue)
+            maxArea = max(maxArea, (j - i) * min(height[i], height[j]))
             if height[i] < height[j]:
                 i += 1
             else:
