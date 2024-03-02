@@ -38,3 +38,30 @@ class Solution:
 
         return maxCount
 
+
+    """ 
+    The following code is the most elegant solution I found for this problem 
+    """
+    
+    # def longestOnes( nums: List[int], k: int) -> int:
+    #     i, j = 0, 0
+    #     while(j < len(nums)):
+    #         if nums[j] == 0:
+    #             k -= 1
+    #         if k < 0 :
+    #             if nums[i] == 0:
+    #                 k += 1
+    #             i += 1
+    #         j += 1
+    #     return j - i
+
+
+
+
+
+
+
+
+
+
+
