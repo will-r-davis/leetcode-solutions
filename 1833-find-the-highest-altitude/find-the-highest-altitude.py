@@ -4,6 +4,7 @@ class Solution:
         altitude = 0
         for x in gain:
             altitude += x
-            maxAltitude = max(altitude, maxAltitude)
+            if altitude > maxAltitude:
+                maxAltitude = altitude
         return maxAltitude
 
