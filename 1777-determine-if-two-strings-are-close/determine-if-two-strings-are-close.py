@@ -3,7 +3,7 @@ class Solution:
         """
         This solution uses two dictionaries created for each string where keys are unique characters 
         and values are their frequency within the word. For two words to be close, 
-        a set of their keys will be identical as will be a sorted list of their values.
+        a set of their composite characters will be identical as will be a sorted list of char frequencies.
         """
         # constructing dictionaries
         dict1 = Counter(word1)
