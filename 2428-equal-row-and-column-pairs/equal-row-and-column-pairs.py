@@ -1,20 +1,10 @@
 class Solution:
     def equalPairs(self, grid: List[List[int]]) -> int:
-        gridLen = len(grid)
         count = 0
-        for i in range(gridLen):
-            curRow = grid[i]
-            for colIdx in range(gridLen):
-                # col = [grid[x][colIdx] for x in range(gridLen)]
+        columns = [[grid[y][x] for y in range(len(grid))] for x in range(len(grid))]
 
-                match = 1
-                for x in range(gridLen):
-                    if grid[x][colIdx] != curRow[x]:
-                        match = 0
-                
-                count += match
-
+        for row in grid:
+            for col in columns:
+                if row == col:
+                    count += 1
         return count
-
-
-
